@@ -6,14 +6,14 @@ import javax.swing.JFrame;
 public class DrawFrame extends JFrame 
 {
 	private DrawController app; 
-	private DrawPanel panel; 
+//	private DrawAppPanel panel; 
 	
 	public DrawFrame(DrawController app)
 	{
 		super(); 
 		
 		this.app = app; 
-		this.panel = panel; 
+//		this.panel = panel; 
 		
 		setupFrame(); 
 	}
