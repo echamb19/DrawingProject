@@ -149,6 +149,45 @@ public class DrawAppPanel extends JPanel
 	
 	private void setupListeners() 
 	{
+		canvas.addMouseListener(new MouseListener()
+		{
+			public void mouseClicked(MouseEvent e) 
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent e) 
+			{
+				
+			}
+			
+			public void mouseReleased(MouseEvent e) 
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent e) 
+			{
+				
+			}
+			 
+			public void mouseExited(MouseEvent e) 
+			{
+				
+			}
+		});
 		
+		canvas.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseDragged(MouseEvent e) 
+			{
+				
+			}
+			
+			public void mouseMoved(MouseEvent e) 
+			{
+				
+			}
+		});
 	}
 }
