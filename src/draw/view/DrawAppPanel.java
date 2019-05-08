@@ -63,6 +63,7 @@ public class DrawAppPanel extends JPanel
 		greenButton = new JButton("Green"); 
 		blueButton = new JButton("Blue");
 		purpleButton = new JButton("Violet");
+		blackButton = new JButton("Black");
 		whiteButton = new JButton("White");
 		
 		// Labels
@@ -96,6 +97,7 @@ public class DrawAppPanel extends JPanel
 		colorPanel.add(yellowButton);
 		colorPanel.add(orangeButton);
 		colorPanel.add(redButton);
+		colorPanel.add(blackButton);
 		colorPanel.add(whiteButton);
 				
 		menuPanel.add(widthSlider);
