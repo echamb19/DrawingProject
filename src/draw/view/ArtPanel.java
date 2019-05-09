@@ -49,6 +49,13 @@ public class ArtPanel extends JPanel
 		this.currentColor = Color.WHITE;
 	}
 	
+	public void clearImage()
+	{
+		this.currentCanvas = new BufferedImage(700, 700, BufferedImage.TYPE_INT_ARGB); 
+		this.setBackground(randomColor()); 
+		repaint(); 
+	}
+	
 	public void drawDot(int currentX, int currentY, int width)
 	{
 		Graphics2D current = currentCanvas.createGraphics(); 

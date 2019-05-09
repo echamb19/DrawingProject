@@ -124,12 +124,19 @@ public class DrawAppPanel extends JPanel
 	{
 		canvasPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED); 
 		canvasPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED); 
-		canvasPane.setViewportView(canvasPane); 
+		canvasPane.setViewportView(canvas); 
 	}
 	
 	private void setupPanel()
 	{
+		this.setLayout(appLayout); 
+		this.setPreferredSize(new Dimension(700, 700)); 
+		this.setBackground(Color.BLACK); 
 		
+		this.add(canvas); 
+		this.add(canvasPane);
+		this.add(colorPanel); 
+		this.add(menuPanel); 
 	}
 	
 	private void setupLayout()
@@ -153,9 +160,10 @@ public class DrawAppPanel extends JPanel
 	{
 		canvas.addMouseListener(new MouseListener()
 		{
+			@Override
 			public void mouseClicked(MouseEvent e) 
 			{
-				
+				canvas.drawDot(e.getX(), e.getY(), widthSlider.getValue()); 
 			}
 			
 			public void mousePressed(MouseEvent e) 
@@ -163,19 +171,20 @@ public class DrawAppPanel extends JPanel
 				
 			}
 			
+			@Override
 			public void mouseReleased(MouseEvent e) 
 			{
-				
+				canvas.resetPoint(); 
 			}
 			
 			public void mouseEntered(MouseEvent e) 
 			{
-				
+				canvas.resetPoint(); 
 			}
 			 
 			public void mouseExited(MouseEvent e) 
 			{
-				
+				canvas.resetPoint(); 
 			}
 		});
 		
