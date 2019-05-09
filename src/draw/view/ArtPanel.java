@@ -22,7 +22,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class ArtPanel extends JPanel
 {
 	private DrawController app; 
-	private Color currenetColor; 
+	private Color currentColor; 
 	private BufferedImage currentCanvas; 
 	private int previousX; 
 	private int previousY; 
@@ -49,11 +49,49 @@ public class ArtPanel extends JPanel
 		this.currentColor = Color.WHITE;
 	}
 	
+	public void setCurrentColor(String color)
+	{
+		if(color.equalsIgnoreCase("Black"))
+		{
+			currentColor = Color.BLACK; 
+		}
+		
+		else if(color.equalsIgnoreCase("Red"))
+		{
+			currentColor = Color.RED;
+		}
+		
+		else if(color.equalsIgnoreCase("Blue"))
+		{
+			currentColor = Color.BLUE; 
+		}
+		
+		else
+		{
+			currentColor = randomColor(); 
+		}
+	}
+	
+	public void drawLine(int currentX, int currentY, int width)
+	{
+		
+	}
 	
 	@Override
 	protected void paintComponent(Graphics graphics)
 	{
 		super.paintComponent(graphics); 
 		graphics.drawImage(currentCanvas, 0, 0, null); 
+	}
+	
+	private Color randomColor()
+	{
+		int red = (int)(Math.random() * 256); 
+		int green = (int)(Math.random() * 256); 
+		int blue = (int)(Math.random() * 256); 
+		int alpha = (int)(Math.random() * 256); 
+		
+		Color randomColor = new Color(red, green, blue, alpha); 
+		return randomColor; 
 	}
 }
