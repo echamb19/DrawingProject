@@ -49,6 +49,15 @@ public class ArtPanel extends JPanel
 		this.currentColor = Color.WHITE;
 	}
 	
+	public void drawDot(int currentX, int currentY, int width)
+	{
+		Graphics2D current = currentCanvas.createGraphics(); 
+		current.setColor(currentColor); 
+		current.setStroke(new BasicStroke(width)); 
+		current.drawOval(currentX, currentY, width, width); 
+		repaint(); 
+	}
+	
 	public void setCurrentColor(String color)
 	{
 		if(color.equalsIgnoreCase("Black"))
