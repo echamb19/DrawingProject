@@ -35,6 +35,25 @@ public class ArtPanel extends JPanel
 		setupPanel(); 
 		resetPoint(); 
 	}
+	
+	public void resetPoint()
+	{
+		previousX = Integer.MIN_VALUE; 
+		previousY = Integer.MAX_VALUE; 
 	}
-
+	
+	public void setupPanel()
+	{
+		this.setPreferredSize(new Dimension(700, 700)); 
+		this.setBackground(Color.BLACK); 
+		this.currentColor = Color.WHITE;
+	}
+	
+	
+	@Override
+	protected void paintComponent(Graphics graphics)
+	{
+		super.paintComponent(graphics); 
+		graphics.drawImage(currentCanvas, 0, 0, null); 
+	}
 }
