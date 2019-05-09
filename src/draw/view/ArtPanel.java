@@ -22,11 +22,19 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class ArtPanel extends JPanel
 {
 	private DrawController app; 
+	private Color currenetColor; 
+	private BufferedImage currentCanvas; 
+	private int previousX; 
+	private int previousY; 
 	
 	public ArtPanel(DrawController app)
 	{
 		super(); 
 		this.app = app;
+		this.currentCanvas = new BufferedImage(700, 700, BufferedImage.TYPE_INT_ARGB); 
+		setupPanel(); 
+		resetPoint(); 
+	}
 	}
 
 }
