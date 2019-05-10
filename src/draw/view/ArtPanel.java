@@ -90,7 +90,20 @@ public class ArtPanel extends JPanel
 	
 	public void drawLine(int currentX, int currentY, int width)
 	{
-		
+		Graphics2D current = currentCanvas.createGraphics(); 
+		current.setColor(currentColor); 
+		current.setStroke(new BasicStroke(width)); 
+		if(previousX == Integer.MIN_VALUE)
+		{
+			current.drawLine(currentX, currentY, currentX, currentY);
+		}
+		else
+		{
+			current.drawLine(previousX, previousY, currentX, currentY);
+		}
+		previousX = currentX; 
+		previousY = currentY; 
+		repaint(); 
 	}
 	
 	@Override
