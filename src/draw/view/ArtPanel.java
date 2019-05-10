@@ -123,4 +123,53 @@ public class ArtPanel extends JPanel
 		Color randomColor = new Color(red, green, blue, alpha); 
 		return randomColor; 
 	}
+	
+	public void saveImage()
+	{
+		try
+		{
+			JFileChooser saveDialog = new JFileChooser(); 
+			saveDialog.showSaveDialog(this); 
+			String savePath = saveDialog.getSelectedFile().getPath(); 
+			if(!savePath.endsWith(".png")); 
+			{
+				savePath += ".png"; 
+			}
+			ImageIO.write(currentCanvas, "PNG", new File(savePath)); 
+		}
+		catch(IOException error)
+		{
+			app.handleErrors(error); 
+		}
+		catch(NullPointerException badChoice)
+		{
+			app.handleErrors(badChoice); 
+		}
+	}
+	
+	public void loadImage()
+	{
+		try
+		{
+			JFileChooser imageChooser = new JFileChooser(); 
+			imageChooser.setFileSelectionMode(JFileChooser.FILES_ONLY); 
+			FileFilter imageFilter = new FileNameExtensionFilter("Image files only.", ImageIO.getReaderFileSuffixes()); 
+			imageChooser.setFileFilter(imageFilter); 
+			
+			int result = imageChooser.showOpenDialog(this); 
+			if(result == JFileChooser.APPROVE_OPTION)
+				
+			{
+				File resultingFile = imageChooser.getSelectedFile(); 
+				BufferedImage newCanvas = ImageIO.read(resultingFile); 
+				currentCanvas = newCanvas; 
+				this.setPreferredSize(new Dimension(currentCanvas.getWidth(), currentCanvas.getHeight())); 
+			}
+			repaint(); 
+		}
+		catch(IOException error)
+		{
+			app.handleErrors(error); 
+		}
+	}
 }
