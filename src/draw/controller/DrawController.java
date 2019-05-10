@@ -20,6 +20,6 @@ public class DrawController
 	
 	public void handleErrors(Exception error)
 	{
-		JOptionPane.showMessageDialog(appFrame, error.getMessage());
+		JOptionPane.showMessageDialog(appFrame, "Error received:" + error.getMessage());
 	}
 }
