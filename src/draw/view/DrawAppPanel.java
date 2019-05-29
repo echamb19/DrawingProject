@@ -264,6 +264,22 @@ public class DrawAppPanel extends JPanel
 			}
 		});
 		
+		loadButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.loadImage(); 
+			}
+		});
+		
+		saveButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.saveImage(); 
+			}
+		});
+		
 		clearButton.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent click)

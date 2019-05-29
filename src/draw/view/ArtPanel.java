@@ -31,7 +31,7 @@ public class ArtPanel extends JPanel
 	{
 		super(); 
 		this.app = app;
-		this.currentCanvas = new BufferedImage(700, 700, BufferedImage.TYPE_INT_ARGB); 
+		this.currentCanvas = new BufferedImage(800, 800, BufferedImage.TYPE_INT_ARGB); 
 		setupPanel(); 
 		resetPoint(); 
 	}
@@ -44,7 +44,7 @@ public class ArtPanel extends JPanel
 	
 	public void setupPanel()
 	{
-		this.setPreferredSize(new Dimension(700, 700)); 
+		this.setPreferredSize(new Dimension(800, 800)); 
 		this.setBackground(Color.BLACK); 
 		this.currentColor = Color.WHITE;
 	}
