@@ -130,10 +130,10 @@ public class DrawAppPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(appLayout); 
-		this.setPreferredSize(new Dimension(700, 700)); 
+		this.setPreferredSize(new Dimension(1200, 800)); 
 		this.setBackground(Color.BLACK); 
 		
-		this.add(canvas); 
+//		this.add(canvas); 
 		this.add(canvasPane);
 		this.add(colorPanel); 
 		this.add(menuPanel); 
@@ -192,12 +192,76 @@ public class DrawAppPanel extends JPanel
 		{
 			public void mouseDragged(MouseEvent e) 
 			{
-				
+				canvas.drawLine(e.getX(), e.getY(), widthSlider.getValue());
 			}
 			
 			public void mouseMoved(MouseEvent e) 
 			{
 				
+			}
+		});
+		
+		redButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("red"); 
+			}
+		});
+		
+		orangeButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("orange"); 
+			}
+		});
+		
+		yellowButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("yellow"); 
+			}
+		});
+		
+		greenButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("green"); 
+			}
+		});
+		
+		blueButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("blue"); 
+			}
+		});
+		
+		purpleButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("purple"); 
+			}
+		});
+		
+		blackButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("black"); 
+			}
+		});
+		
+		whiteButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.setCurrentColor("white"); 
 			}
 		});
 	}

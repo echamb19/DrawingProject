@@ -67,19 +67,44 @@ public class ArtPanel extends JPanel
 	
 	public void setCurrentColor(String color)
 	{
-		if(color.equalsIgnoreCase("Black"))
-		{
-			currentColor = Color.BLACK; 
-		}
-		
-		else if(color.equalsIgnoreCase("Red"))
+		if(color.equalsIgnoreCase("Red"))
 		{
 			currentColor = Color.RED;
+		}
+		
+		else if(color.equalsIgnoreCase("Orange"))
+		{
+			currentColor = Color.ORANGE; 
+		}
+		
+		else if(color.equalsIgnoreCase("Yellow"))
+		{
+			currentColor = Color.YELLOW; 
+		}
+		
+		else if(color.equalsIgnoreCase("Green"))
+		{
+			currentColor = Color.GREEN; 
 		}
 		
 		else if(color.equalsIgnoreCase("Blue"))
 		{
 			currentColor = Color.BLUE; 
+		}
+		
+		else if(color.equalsIgnoreCase("Purple"))
+		{
+			currentColor = new Color(75, 0, 130); 
+		}
+		
+		else if(color.equalsIgnoreCase("Black"))
+		{
+			currentColor = Color.BLACK; 
+		}
+		
+		else if(color.equalsIgnoreCase("White"))
+		{
+			currentColor = Color.WHITE; 
 		}
 		
 		else

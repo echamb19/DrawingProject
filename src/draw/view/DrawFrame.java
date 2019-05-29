@@ -22,7 +22,7 @@ public class DrawFrame extends JFrame
 	{
 		this.setContentPane(panel); 
 		this.setTitle("Draw GUI"); 
-		this.setSize(1000, 800); 
+		this.setSize(1200, 800); 
 		this.setResizable(false); 
 		this.setVisible(true); 
 	}
