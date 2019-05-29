@@ -52,7 +52,7 @@ public class ArtPanel extends JPanel
 	public void clearImage()
 	{
 		this.currentCanvas = new BufferedImage(700, 700, BufferedImage.TYPE_INT_ARGB); 
-		this.setBackground(randomColor()); 
+		this.setBackground(Color.BLACK); 
 		repaint(); 
 	}
 	

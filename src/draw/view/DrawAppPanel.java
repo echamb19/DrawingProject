@@ -89,15 +89,14 @@ public class DrawAppPanel extends JPanel
 		orangeButton.setForeground(Color.ORANGE);
 		redButton.setForeground(Color.RED);
 		yellowButton.setForeground(Color.YELLOW);
-				
+
 		colorPanel.add(blackButton);
-		colorPanel.add(purpleButton);
-		colorPanel.add(blueButton);
-		colorPanel.add(greenButton);
-		colorPanel.add(yellowButton);
-		colorPanel.add(orangeButton);
 		colorPanel.add(redButton);
-		colorPanel.add(blackButton);
+		colorPanel.add(orangeButton);
+		colorPanel.add(yellowButton);
+		colorPanel.add(greenButton);
+		colorPanel.add(blueButton);
+		colorPanel.add(purpleButton);
 		colorPanel.add(whiteButton);
 				
 		menuPanel.add(widthSlider);
@@ -262,6 +261,14 @@ public class DrawAppPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				canvas.setCurrentColor("white"); 
+			}
+		});
+		
+		clearButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				canvas.clearImage(); 
 			}
 		});
 	}
